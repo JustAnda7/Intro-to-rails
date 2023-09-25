@@ -1,0 +1,17 @@
+<div id="<%= dom_id friend %>">
+  <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%= friend.first_name %> <%= friend.last_name %></h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><strong>Email:</strong><%= friend.email %></li>
+      <li class="list-group-item"><strong>Phone:</strong><%= friend.phone %></li>
+      <li class="list-group-item"><strong><%= friend.social_media %>:</strong><%= friend.handle %></li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
+</div>

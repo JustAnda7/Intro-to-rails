@@ -1,0 +1,24 @@
+
+<h1>Friends</h1>
+<br>
+  <div id="friends">
+    <div class="row row-cols-auto">
+    <% @friends.each do |friend| %>
+      <% if friend.user == current_user%>
+        <div id="<%= dom_id friend %>">
+          <div class="card bg-success" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><%= friend.first_name %> <%= friend.last_name %></h5>
+            </div>
+            <div class="card-body">
+              <%= link_to "Show ", friend, class:"btn btn-info" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+    </div>  
+  </div>
+<br>
+<%= link_to "New friend", new_friend_path, class:"btn btn-secondary" %>

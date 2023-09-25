@@ -1,0 +1,21 @@
+
+<div id="<%= dom_id @friend %>">
+  <div class="p-5 mb-4 text-bg-secondary rounded-3">
+    <div class="container-fluid py-5">
+      <h3 class="display-5 fw-bold"><%= @friend.first_name %> <%= @friend.last_name %></h3>
+      <div class="container-fluid py-5">
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-dark"><strong>Email:</strong><%= @friend.email %></li>
+          <li class="list-group-item list-group-item-dark"><strong>Phone:</strong><%= @friend.phone %></li>
+          <li class="list-group-item list-group-item-dark"><strong><%= @friend.social_media %>:</strong><%= @friend.handle %></li>
+        </ul>
+      </div>
+        <%= link_to "Edit", edit_friend_path(@friend), class:"btn btn-primary btn-sm" %>
+        <%= link_to "Destroy", @friend, data: { turbo_method: :delete }, class:"btn btn-danger btn-sm" %>
+    </div>
+  </div>
+</div>
+
+<div>
+  <%= link_to "Back", friends_path, class:"btn btn-secondary btn-lg" %>
+</div>
